@@ -5,8 +5,8 @@ Add item to the list
 Delete item from the list
 
 
-<img src="main menu.png" width="752">
-<img src="Countries List.png" width="752">
-<img src="Details Page.png" width="752">
-<img src="Delete Country.png" width="752">
-<img src="add country.png" width="752">
+<img src="mainmenu.PNG" width="752">
+<img src="CountriesList.PNG" width="752">
+<img src="DetailsPage.PNG" width="752">
+<img src="DeleteCountry.PNG" width="752">
+<img src="addcountry.PNG" width="752">
