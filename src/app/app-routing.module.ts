@@ -12,13 +12,24 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
   {
-    path: 'list',
-    loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
+    path: 'list22',
+    children: [
+      {
+        path: '',
+        loadChildren:
+        './list22/list22.module#List22PageModule'
+      },
+      {
+        path: ':id',
+        loadChildren: './country/country.module#CountryPageModule'
+      }
+    ]
   },
-  { path: 'country', loadChildren: './country/country.module#CountryPageModule' },
-  { path: 'countrylist', loadChildren: './countrylist/countrylist.module#CountrylistPageModule' },
-  { path: 'add-country', loadChildren: './add-country/add-country.module#AddCountryPageModule' }
+  { path: 'add-country',
+  loadChildren: './add-country/add-country.module#AddCountryPageModule'
+ },
 ];
+
 
 @NgModule({
   imports: [
