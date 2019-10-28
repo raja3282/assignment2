@@ -14,7 +14,10 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
-  }
+  },
+  { path: 'country', loadChildren: './country/country.module#CountryPageModule' },
+  { path: 'countrylist', loadChildren: './countrylist/countrylist.module#CountrylistPageModule' },
+  { path: 'add-country', loadChildren: './add-country/add-country.module#AddCountryPageModule' }
 ];
 
 @NgModule({
