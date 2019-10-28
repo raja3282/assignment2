@@ -4,16 +4,16 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })export class MylistService {
   country = [
-    { id: '01', name: 'PAKISTAN' },
-    { id: '02', name: 'SUADIA ARABIA' },
-    { id: '03', name: 'ROMANIA' },
-    { id: '04', name: 'UNITED KINGDOM' },
-    { id: '05', name: 'BAHRAIN' },
-    { id: '06', name: 'KUWAIT' },
-    { id: '07', name: 'CHILLE' },
-    { id: '08', name: 'CHINA' },
-    { id: '09', name: 'BRAZIL' },
-    { id: '10', name: 'TURKEY' }
+    { id: '01', name: 'PAKISTAN', capital: 'ISLAMABAD', continent: ' ASIA' },
+    { id: '02', name: 'SUADIA ARABIA' , capital: 'ISLAMABAD', continent: ' ASIA'},
+    { id: '03', name: 'ROMANIA', capital: 'ISLAMABAD', continent: ' ASIA' },
+    { id: '04', name: 'UNITED KINGDOM' , capital: 'ISLAMABAD', continent: ' ASIA'},
+    { id: '05', name: 'BAHRAIN', capital: 'ISLAMABAD', continent: ' ASIA' },
+    { id: '06', name: 'KUWAIT' , capital: 'ISLAMABAD', continent: ' ASIA'},
+    { id: '07', name: 'CHILLE', capital: 'ISLAMABAD', continent: ' ASIA' },
+    { id: '08', name: 'CHINA', capital: 'ISLAMABAD', continent: ' ASIA' },
+    { id: '09', name: 'BRAZIL' , capital: 'ISLAMABAD', continent: ' ASIA' },
+    { id: '10', name: 'TURKEY' , capital: 'ISLAMABAD', continent: ' ASIA' }
     ];
 
   constructor() {}
@@ -24,6 +24,14 @@ import { Injectable } from '@angular/core';
 
   getAllCountry() {
     return this.country;
+  }
+
+  AddCountry(nam: string , i: string, cap: string , cont: string ) {
+    this.country.push({id : i , name: nam , capital: cap , continent : cont });
+  }
+
+  AddCountryByObj(CountryOBJ) {
+this.country.push(CountryOBJ);
   }
 
   deleteCountry(id: string) {

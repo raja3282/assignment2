@@ -17,13 +17,13 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'addcountry',
-      url: '/add-country',
-      icon: 'people'
+      title: 'Country list',
+      url: '/country-list',
+      icon: 'list'
     },
     {
-      title: 'list',
-      url: '/list22',
+      title: 'Add Country',
+      url: '/add-country',
       icon: 'people'
     }
   ];

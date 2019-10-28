@@ -12,12 +12,12 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
   },
   {
-    path: 'list22',
+    path: 'country-list',
     children: [
       {
         path: '',
         loadChildren:
-        './list22/list22.module#List22PageModule'
+        './country-list/country-list.module#CountryListPageModule'
       },
       {
         path: ':id',
@@ -27,7 +27,7 @@ const routes: Routes = [
   },
   { path: 'add-country',
   loadChildren: './add-country/add-country.module#AddCountryPageModule'
- },
+ }
 ];
 
 

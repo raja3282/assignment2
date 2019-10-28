@@ -1,9 +1,39 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>add country</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="home"></ion-back-button>
+        </ion-buttons>
+
+        <ion-title>add Country</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
+    <ion-item>
+        <ion-grid>
+            <ion-item>
+                <ion-label position="floating">Country Name</ion-label>
+                <ion-input type="text" [(ngModel)]="name"></ion-input>
+            </ion-item>
 
+            <ion-item>
+                <ion-label position="floating">Country Code </ion-label>
+                <ion-input type="text" [(ngModel)]="id"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating"> Capital</ion-label>
+                <ion-input type="text" [(ngModel)]="capital"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Continent</ion-label>
+                <ion-input type="text" [(ngModel)]="continent"></ion-input>
+            </ion-item>
+
+            <ion-button (click)="Addcountry()">
+                <ion-label>Submit</ion-label>
+            </ion-button>
+        </ion-grid>
+    </ion-item>
 </ion-content>

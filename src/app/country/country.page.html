@@ -1,9 +1,46 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>country</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="country-list"></ion-back-button>
+
+        </ion-buttons>
+
+        <ion-title>Country</ion-title>
+
+        <ion-button slot="end" (click)="deletecountry()">
+            <ion-icon name="trash"></ion-icon>
+        </ion-button>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content>
 
+<ion-content>
+    <ion-card>
+        <ion-card-header>
+            <ion-label position="floating"><b>NAME</b></ion-label>
+
+            <ion-card-title>{{singlecountry?.name}}</ion-card-title>
+
+        </ion-card-header>
+
+        <b>Features:</b><br>
+
+
+        <ion-card-content>
+
+            <ion-label position="floating"> <b> Capital </b> </ion-label>
+
+            {{singlecountry?.capital}}
+            <br>
+
+            <ion-label position="floating"> <b> Continent </b> </ion-label>
+
+            {{singlecountry?.continent}}
+
+            <br>
+
+        </ion-card-content>
+
+    </ion-card>
 </ion-content>
